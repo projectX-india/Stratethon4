@@ -6,7 +6,18 @@ const patientsData = Router();
 patientsData.get('/:id',async (req,res) => {
     let patient = await Patients.findOne(
         {id:req.params.id}
-    ).populate(["encounters","immunizations"]);
+    ).populate([
+        "encounters",
+        "immunizations",
+        "conditions",
+        "allergies",
+        "devices",
+        "imagingStudies",
+        "observations",
+        "supplies",
+        "medications",
+        "procedures"
+    ]);
     return res.send(patient);
 })
 
