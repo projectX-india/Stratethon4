@@ -12,12 +12,12 @@ careplansData.post('/insert',async(req,res) => {
             async data => {
                 await Encounters.findOneAndUpdate(
                     {id:data.encounterid},
-                    {$set:{careplan:data._id}}
+                    {$set:{carePlan:data._id}}
                 )
 
                 return Patients.findOneAndUpdate(
                     {id:data.patientid},
-                    {$push:{careplans:data._id}},
+                    {$push:{carePlans:data._id}},
                     { new: true, useFindAndModify: false }
                 )
             }

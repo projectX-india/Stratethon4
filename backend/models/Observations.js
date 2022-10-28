@@ -5,7 +5,7 @@ const observationsSchema = new mongoose.Schema({
     patientid:String,
     encounterid:String,
     category:String,
-    code:Number,
+    code:String,
     description:String,
     value:Number,
     units:String,

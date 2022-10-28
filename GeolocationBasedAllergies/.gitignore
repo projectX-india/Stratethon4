@@ -1,0 +1,8 @@
+maindata
+training_2
+training_finalData_take2
+*.csv
+*.yml
+final_model
+.ipynb_checkpoints
+.DS_Store
