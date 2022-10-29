@@ -8,12 +8,25 @@ import Conditions from "./scenes/conditions";
 import Immunisations from "./scenes/immunisations";
 import Medications from "./scenes/medications";
 import Observations from "./scenes/observations";
+import axios from "./axios.js"
 import { sampleData } from "./data/sampleData";
 import { useState } from "react";
 
 function App() {
   const [theme, colorMode] = useMode();
+  const [patientId,setpatientId]=useState("");
   const [patientData,setpatientData]=useState(sampleData);
+
+  const handleClick = async () => {
+    await axios.get(`/patient/${patientId}`)
+      .then((response) => {
+          // console.log(response.data);
+          setpatientData(response.data);
+          
+      }).catch((error) => {
+        console.log(error)
+      })
+  };
 
   return (
     <>
@@ -21,15 +34,15 @@ function App() {
        <ThemeProvider theme={theme}>
          <CssBaseline />
         <div className="app" >
-            <Sidebar patientData={patientData}/>
-          <main className="component">
-            <Topbar/>
+            <Sidebar patientData={patientData} />
+          <main className="content">
+            <Topbar patientId={patientId} setpatientId={setpatientId} handleClick={handleClick}/>
             <Routes>
                 <Route path="/" element={<Dashboard patientData={patientData} />} />
-                <Route path="/observations" element={<Observations/>} />
-                <Route path="/immunisations" element={<Immunisations/>} />
-                <Route path="/conditions" element={<Conditions/>} />
-                <Route path="/medications" element={<Medications/>} />
+                <Route path="/observations" element={<Observations patientData={patientData} />} />
+                <Route path="/immunisations" element={<Immunisations patientData={patientData} />} />
+                <Route path="/conditions"  element={<Conditions  patientData={patientData} />} />
+                <Route path="/medications" element={<Medications patientData={patientData} />} />
             </Routes>
           </main>
         </div>

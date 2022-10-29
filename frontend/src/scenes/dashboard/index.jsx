@@ -1,15 +1,28 @@
 import React from 'react'
+import { Box } from "@mui/material";
+import BasicCard from '../../components/cards'
 
 const Dashboard = ({patientData}) => {
   return (
-    <div className='container'>
-    <div>Dashboard</div>
-    <div>Id => {patientData.id}</div>
-    <div>BirthDate => {patientData.birthDate}</div>
-    <div>DeathDate => {patientData.deathDate}</div>
-    <div>Driving Licence => {patientData.driversLicence}</div>
-    <div>Passport => {patientData.passport}</div>
-    <div>Race => {patientData.race}</div>
+    <>
+      <h3 className='m-4'>Dashboard</h3>
+      <Box display="flex" flexDirection="row">
+      <Box display="flex" width="30%" flexDirection="column">
+        <BasicCard title="Id"  desc={patientData.id}/>
+        <BasicCard title="BirthDate"  desc={patientData.birthDate}/>
+        <BasicCard title="Birth Place"  desc={patientData.birthplace}/>
+      </Box>
+      <Box display="flex" width="30%" flexDirection="column">
+        <BasicCard title="DeathDate"  desc={patientData.deathDate}/>
+        <BasicCard title="Driving Licence"  desc={patientData.driversLicence}/>
+        <BasicCard title="Address"  desc={patientData.address}/>
+      </Box>
+      <Box display="flex" width="30%" flexDirection="column">
+        <BasicCard title="Passport"  desc={patientData.passport}/>
+        <BasicCard title="Race"  desc={patientData.race}/>
+        <BasicCard title="City"  desc={patientData.city}/>
+      </Box>
+    
     {/* "birthDate": "1989-09-21T00:00:00.000Z",
         "deathDate": null,
         "SSN": "999-49-1746",
@@ -29,7 +42,8 @@ const Dashboard = ({patientData}) => {
         "city": "Boston",
         "state": "Massachusetts",
         "zip": "2152", */}
-    </div>      
+      </Box>      
+    </>
     )
 }
 
