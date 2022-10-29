@@ -20,9 +20,7 @@ function App() {
   const handleClick = async () => {
     await axios.get(`/patient/${patientId}`)
       .then((response) => {
-          // console.log(response.data);
           setpatientData(response.data);
-          
       }).catch((error) => {
         console.log(error)
       })
