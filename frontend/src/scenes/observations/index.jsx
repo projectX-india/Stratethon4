@@ -69,9 +69,9 @@ const Observations = ({patientData}) => {
       console.log(obj);
       let dbp = formatChartData("Diastolic Blood Pressure",obj["Diastolic Blood Pressure"]);
       setbpChartData(bpchartData=>[...bpchartData,dbp])
-      // let sbp = formatChartData("Systolic Blood Pressure",obj["Systolic Blood Pressure"]);
+      let sbp = formatChartData("Systolic Blood Pressure",obj["Systolic Blood Pressure"]);
       // console.log(sbp);
-      // setChartData(chartData=>[...chartData,sbp])
+      setbpChartData(chartData=>[...chartData,sbp])
       
       let height = formatChartData("Body Height",obj["Body Height"]);
       setheightchartData(heightchartData=>[...heightchartData,height])
