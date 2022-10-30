@@ -27,7 +27,7 @@ const MyResponsiveLine = ({ data }) => (
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'transportation',
+            legend: 'id',
             legendOffset: 36,
             legendPosition: 'middle'
         }}
@@ -36,7 +36,7 @@ const MyResponsiveLine = ({ data }) => (
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'count',
+            legend: 'value',
             legendOffset: -40,
             legendPosition: 'middle'
         }}

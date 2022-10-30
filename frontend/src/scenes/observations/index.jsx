@@ -31,8 +31,11 @@ function formatChartData(val,obj) {
 const Observations = ({patientData}) => {
 
   const [rows,setRows] = useState([])
-  const [chartData,setChartData] = useState([])
-
+  const [bpchartData,setbpChartData] = useState([])
+  const [heightchartData,setheightchartData] = useState([])
+  const [weightchartData,setweightchartData] = useState([])
+  const [bmichartData,setbmichartData] = useState([])
+  
   useEffect(() => {
       const fillRows = ()=>{
         let data = patientData.observations;
@@ -41,6 +44,7 @@ const Observations = ({patientData}) => {
             setRows(rows=>[...rows,createData( data[i].date, data[i].encounterid,data[i].description,data[i].value)]);
           }
         }
+        
       }
       setRows([]);
       fillRows();
@@ -62,18 +66,35 @@ const Observations = ({patientData}) => {
           }
         }
       }
+      console.log(obj);
       let dbp = formatChartData("Diastolic Blood Pressure",obj["Diastolic Blood Pressure"]);
-      console.log(dbp);
-      setChartData(chartData=>[...chartData,dbp])
-      console.log(chartData);
+      setbpChartData(bpchartData=>[...bpchartData,dbp])
+      // let sbp = formatChartData("Systolic Blood Pressure",obj["Systolic Blood Pressure"]);
+      // console.log(sbp);
+      // setChartData(chartData=>[...chartData,sbp])
+      
+      let height = formatChartData("Body Height",obj["Body Height"]);
+      setheightchartData(heightchartData=>[...heightchartData,height])
+      
+      let weight = formatChartData("Body Weight",obj["Body Weight"]);
+      setweightchartData(weightchartData=>[...weightchartData,weight])
+      
+      let bmi = formatChartData("Body Mass Index",obj["Body Mass Index"]);
+      setbmichartData(bmichartData=>[...bmichartData,bmi])
+      
+      // console.log(chartData);
     }
-    setChartData([]);
+    setbpChartData([]);
+    setheightchartData([]);
+    setweightchartData([]);
+    setbmichartData([]);
     fillChart();
 
 }, [patientData])
 
   
 
+// console.log(rows);
   return (
     <>
       <h3 className="p-3">Observations</h3>
@@ -106,8 +127,22 @@ const Observations = ({patientData}) => {
       </Table>
     </TableContainer>
     </div>
-    <div className="container w-50 p-1">
-      <MyResponsiveLine data={chartData}/>
+    
+    <div className="container w-100 h-100  m-4">
+        <div className="container w-50 h-50 m-2 p-1 bg-light text-dark">
+          <MyResponsiveLine data={bpchartData}/>
+        </div>
+        <div className="container w-50 h-50 m-2 p-1 bg-light text-dark">
+          <MyResponsiveLine data={heightchartData}/>
+        </div>
+      </div>
+    <div className="container w-100 h-100  m-4">
+        <div className="container w-50 h-50 m-2 p-1 bg-light text-dark">
+          <MyResponsiveLine data={weightchartData}/>
+        </div>
+        <div className="container w-50 h-50 m-2 p-1 bg-light text-dark">
+          <MyResponsiveLine data={bmichartData}/>
+        </div>
     </div>
    </>
     );
