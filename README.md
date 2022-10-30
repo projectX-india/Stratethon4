@@ -18,6 +18,8 @@ Webapp Link - [https://stratethon.web.app/](https://stratethon.web.app/)
 
 Machine learning Models - https://github.com/phoenix-aditya/UpCare-models
 
+Youtube Link - [https://youtu.be/SxTXiWJ3ikY](https://youtu.be/SxTXiWJ3ikY)
+
 ---
 
 # Problem
