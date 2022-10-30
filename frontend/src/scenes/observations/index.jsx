@@ -41,7 +41,8 @@ const Observations = ({patientData}) => {
         let data = patientData.observations;
         for(let i=0;i<data.length;i++){
           if(data[i]){
-            setRows(rows=>[...rows,createData( data[i].date, data[i].encounterid,data[i].description,data[i].value)]);
+            var date = new Date(data[i].date);
+            setRows(rows=>[...rows,createData( date.toDateString(), data[i].encounterid,data[i].description,data[i].value)]);
           }
         }
         
@@ -57,20 +58,21 @@ const Observations = ({patientData}) => {
       let data = patientData.observations;
       for(let i=0;i<data.length;i++){
         if(data[i]){
+          var date = new Date(data[i].date);
           if(obj[data[i].description]){
-            obj[data[i].description][data[i].date]=data[i].value;
+            obj[data[i].description][date.toDateString()]=data[i].value;
           }
           else{
             obj[data[i].description]={};
-            obj[data[i].description][data[i].date]=data[i].value;
+            obj[data[i].description][date.toDateString()]=data[i].value;
           }
         }
       }
-      console.log(obj);
+      
       let dbp = formatChartData("Diastolic Blood Pressure",obj["Diastolic Blood Pressure"]);
       setbpChartData(bpchartData=>[...bpchartData,dbp])
+      
       let sbp = formatChartData("Systolic Blood Pressure",obj["Systolic Blood Pressure"]);
-      // console.log(sbp);
       setbpChartData(chartData=>[...chartData,sbp])
       
       let height = formatChartData("Body Height",obj["Body Height"]);
@@ -82,7 +84,6 @@ const Observations = ({patientData}) => {
       let bmi = formatChartData("Body Mass Index",obj["Body Mass Index"]);
       setbmichartData(bmichartData=>[...bmichartData,bmi])
       
-      // console.log(chartData);
     }
     setbpChartData([]);
     setheightchartData([]);

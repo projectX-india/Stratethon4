@@ -25,7 +25,9 @@ const Conditions = ({patientData}) => {
         let data = patientData.conditions;
         for(let i=0;i<data.length;i++){
           if(data[i]){
-            setRows(rows=>[...rows,createData( data[i].start, data[i].stop,data[i].encounterid,data[i].description)]);
+            var start = new Date(data[i].start);
+            var stop = new Date(data[i].stop);
+            setRows(rows=>[...rows,createData( start.toDateString(), stop.toDateString(),data[i].encounterid,data[i].description)]);
           }
         }
       }

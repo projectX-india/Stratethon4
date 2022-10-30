@@ -3,17 +3,21 @@ import { Box } from "@mui/material";
 import BasicCard from '../../components/cards'
 
 const Dashboard = ({patientData}) => {
+  var birthDate = new Date(patientData.birthDate);
+  var deathDate = new Date(patientData.deathDate);
+            
+  // date.toDateString()
   return (
     <>
       <h3 className='m-4'>Dashboard</h3>
       <Box display="flex" flexDirection="row">
       <Box display="flex" width="30%" flexDirection="column">
         <BasicCard title="Id"  desc={patientData.id}/>
-        <BasicCard title="BirthDate"  desc={patientData.birthDate}/>
+        <BasicCard title="BirthDate"  desc={birthDate.toDateString()}/>
         <BasicCard title="Birth Place"  desc={patientData.birthplace}/>
       </Box>
       <Box display="flex" width="30%" flexDirection="column">
-        <BasicCard title="DeathDate"  desc={patientData.deathDate}/>
+        <BasicCard title="DeathDate"  desc={deathDate.toDateString()}/>
         <BasicCard title="Driving Licence"  desc={patientData.driversLicence}/>
         <BasicCard title="Address"  desc={patientData.address}/>
       </Box>

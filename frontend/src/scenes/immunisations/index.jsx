@@ -26,7 +26,8 @@ const Immunisations = ({patientData}) => {
         let data = patientData.immunizations;
         for(let i=0;i<data.length;i++){
           if(data[i]){
-            setRows(rows=>[...rows,createData( data[i].date,data[i].encounterid,data[i].description,data[i].baseCost.$numberDecimal)]);
+            var date = new Date(data[i].date);
+            setRows(rows=>[...rows,createData( date.toDateString(),data[i].encounterid,data[i].description,data[i].baseCost.$numberDecimal)]);
           }
         }
       }

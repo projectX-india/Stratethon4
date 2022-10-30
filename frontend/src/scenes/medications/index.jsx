@@ -26,7 +26,8 @@ const Medications = ({patientData}) => {
         let data = patientData.medications;
         for(let i=0;i<data.length;i++){
           if(data[i]){
-            setRows(rows=>[...rows,createData( data[i].start,data[i].description,data[i].basecost.$numberDecimal,data[i].totalcost.$numberDecimal)]);
+            var date = new Date(data[i].start);
+            setRows(rows=>[...rows,createData( date.toDateString(),data[i].description,data[i].basecost.$numberDecimal,data[i].totalcost.$numberDecimal)]);
           }
         }
       }
