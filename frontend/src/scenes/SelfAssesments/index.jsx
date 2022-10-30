@@ -131,14 +131,20 @@ const SelfAssesments = ({patientData}) => {
       let bmi = formatChartData("Body Mass Index",obj["Body Mass Index"]);
       setbmichartData(bmichartData=>[...bmichartData,bmi])
       
-      let lastCholestrol = Object.values(obj["Total Cholesterol"])[Object.keys(obj["Total Cholesterol"]).length-1];
-      setheartAPIdata(heartAPIdata => ({...heartAPIdata,cholestrol:lastCholestrol}))
+      if(obj["Total Cholesterol"] && Object.keys(obj["Total Cholesterol"]).length>0){
+        let lastCholestrol = Object.values(obj["Total Cholesterol"])[Object.keys(obj["Total Cholesterol"]).length-1];
+        setheartAPIdata(heartAPIdata => ({...heartAPIdata,cholestrol:lastCholestrol}))
+      }
 
-      let lastBP = Object.values(obj["Systolic Blood Pressure"])[Object.keys(obj["Systolic Blood Pressure"]).length-1];
-      setheartAPIdata(heartAPIdata => ({...heartAPIdata,bp:lastBP}))
+      if(obj["Systolic Blood Pressure"] && Object.keys(obj["Systolic Blood Pressure"]).length>0){
+        let lastBP = Object.values(obj["Systolic Blood Pressure"])[Object.keys(obj["Systolic Blood Pressure"]).length-1];
+        setheartAPIdata(heartAPIdata => ({...heartAPIdata,bp:lastBP}))
+      }
 
-      let lastHeartRate = Object.values(obj["Heart rate"])[Object.keys(obj["Heart rate"]).length-1];
-      setheartAPIdata(heartAPIdata => ({...heartAPIdata,heartrate:lastHeartRate}))
+      if(obj["Heart rate"] && Object.keys(obj["Heart rate"]).length > 0){
+        let lastHeartRate = Object.values(obj["Heart rate"])[Object.keys(obj["Heart rate"]).length-1];
+        setheartAPIdata(heartAPIdata => ({...heartAPIdata,heartrate:lastHeartRate}))
+      }
     }
     setbpChartData([]);
     setheightchartData([]);
