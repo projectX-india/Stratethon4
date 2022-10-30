@@ -13,6 +13,7 @@ import BooleanQuestion from "material-survey/components/BooleanQuestion";
 import Alert from '@mui/material/Alert';
 import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
+import axios from 'axios';
 
 import {  useTheme } from "@mui/material";
 import {tokens} from "../../theme"
@@ -23,6 +24,13 @@ const Allergies = ({patientData}) => {
     const colors = tokens(theme.palette.mode);
 
     const [existingAllergies, setexistingAllergies] = useState([]);
+    const [predictedAllergies, setpredictedAllergies] = useState([]);
+    const [allergyAPI, setallergyAPI] = useState({
+        "age": 0,
+        "latitude": 0,
+        "longitude": 0
+    })
+
     const [allergySurveyQuestions, setallergySyrveyQuestions] = useState([
         {
             'answer':false,
@@ -64,6 +72,41 @@ const Allergies = ({patientData}) => {
       }
       insertAllergies();
     }, [patientData])
+
+    useEffect(() => {
+        if(patientData){
+            const date = new Date(patientData.birthDate);
+            setallergyAPI(allergyAPI => ({...allergyAPI,age:date.getTime()}))
+            setallergyAPI(allergyAPI => ({...allergyAPI,latitude:patientData.latitude.$numberDecimal}))
+            setallergyAPI(allergyAPI => ({...allergyAPI,longitude:patientData.longitude.$numberDecimal}))
+        }
+    },[patientData])
+
+    useEffect(() => {
+        const getPredictions = async () => {
+            await axios.post("https://wecare-model.herokuapp.com/Allergy",allergyAPI).then((response) => {
+                console.log(response.data);
+                setpredictedAllergies(response.data.response);
+            });
+        }
+        if(allergyAPI.age && allergyAPI.latitude && allergyAPI.longitude){
+            getPredictions();
+        }
+    },[allergyAPI])
+
+    useEffect(() => {
+        setallergySyrveyQuestions([]);
+        if(predictedAllergies){
+            for(let i=0;i<predictedAllergies.length;++i){
+                let tempObject = {
+                    'answer':false,
+                    'description':predictedAllergies[i].DESCRIPTION,
+                    'reactionQuestion':`Do you think you have ${predictedAllergies[i].DESCRIPTION1}?`
+                }
+                setallergySyrveyQuestions(allergySurveyQuestions=>[...allergySurveyQuestions,tempObject]);
+            }
+        }
+    },[predictedAllergies])
     
 
     return (
@@ -106,14 +149,14 @@ const Allergies = ({patientData}) => {
                             </ListSubheader>
                         }>
                             {
-                                existingAllergies.map(function(object, i){
+                                predictedAllergies.map(function(object, i){
                                     return (
                                         <ListItem disablePadding>
                                             <ListItemButton>
                                                 <ListItemIcon>
                                                     <DangerousIcon/>
                                                 </ListItemIcon>
-                                                <ListItemText primary={`${object.description} (${object.category})`} />
+                                                <ListItemText primary={`${object.DESCRIPTION} (${object.CATEGORY})`} />
                                             </ListItemButton>
                                         </ListItem>
                                     )
