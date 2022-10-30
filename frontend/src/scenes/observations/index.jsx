@@ -8,10 +8,11 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import MyResponsiveLine from "../../components/line";
 import { useState, useEffect } from "react";
-  
+
 function createData(number, item, qty, price) {
  return { number, item, qty, price};
 }
+<<<<<<< HEAD
   
 function formatChartData(val,obj) {
   let ans={}
@@ -26,10 +27,14 @@ function formatChartData(val,obj) {
   }
   return ans;
 }
+=======
+
+
+>>>>>>> 1b2dd350c7ac2436ee130e383970ed3f2727453b
 
 
 const Observations = ({patientData}) => {
-  
+
   const [rows,setRows] = useState([])
   const [chartData,setChartData] = useState([])
 
@@ -47,6 +52,7 @@ const Observations = ({patientData}) => {
 
   }, [patientData])
 
+<<<<<<< HEAD
   useEffect(() => {
     const fillChart = ()=>{
       var obj = {};
@@ -73,11 +79,17 @@ const Observations = ({patientData}) => {
 }, [patientData])
 
   
+=======
+
+>>>>>>> 1b2dd350c7ac2436ee130e383970ed3f2727453b
 
   return (
     <>
       <h3 className="p-3">Observations</h3>
-      <div className="container p-4">
+      <div className="container p-4" style={{
+        overflow:"scroll",
+        maxHeight:"80%"
+      }}>
       <TableContainer component={Paper}>
       <Table aria-label="simple table">
         <TableHead>
