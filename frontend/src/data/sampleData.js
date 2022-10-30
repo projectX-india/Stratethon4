@@ -425,7 +425,26 @@ export const sampleData = {
               "__v": 0
            }
         ],
-        "allergies": [],
+        "allergies": [
+         {
+            "_id": "635e5e4c61cfe8c37d1217d9",
+            "start": "2000-05-14T00:00:00.000Z",
+            "stop": null,
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "encounterid": "ad33c19f-4cea-846d-d1d7-ebb55ed2357d",
+            "code": 7984,
+            "description": "Penicillin V",
+            "type": "allergy",
+            "category": "medication",
+            "reaction1": null,
+            "description1": "",
+            "severity1": "",
+            "reaction2": null,
+            "description2": "",
+            "severity2": "",
+            "__v": 0
+        }
+        ],
         "devices": [],
         "imagingStudies": [],
         "observations": [

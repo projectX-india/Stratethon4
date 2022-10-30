@@ -98,7 +98,7 @@ const Observations = ({patientData}) => {
   return (
     <>
       <h3 className="p-3">Observations</h3>
-      <div className="container p-4" style={{
+      {/* <div className="container p-4" style={{
         overflow:"scroll",
         maxHeight:"80%"
       }}>
@@ -126,24 +126,30 @@ const Observations = ({patientData}) => {
         </TableBody>
       </Table>
     </TableContainer>
-    </div>
-    
-    <div className="container w-100 h-100  m-4">
-        <div className="container w-50 h-50 m-2 p-1 bg-light text-dark">
+    </div> */}
+    <div style={{'height':'100%','width':'90%','display':'flex','flexDirection':'row'}}>
+    <div className="container w-50 h-50  m-4">
+        <h4>Blood Pressure Observations</h4>
+        <div className="container w-100 h-100 m-2 p-1 bg-light text-dark">
           <MyResponsiveLine data={bpchartData}/>
         </div>
-        <div className="container w-50 h-50 m-2 p-1 bg-light text-dark">
+        <h4>Height Observations</h4>
+        <div className="container w-100 h-100 m-2 p-1 bg-light text-dark">
           <MyResponsiveLine data={heightchartData}/>
         </div>
-      </div>
-    <div className="container w-100 h-100  m-4">
-        <div className="container w-50 h-50 m-2 p-1 bg-light text-dark">
+    </div>
+    <div className="container w-50 h-50  m-4">
+        <h4>Weight Observations</h4>
+        <div className="container w-100 h-100 m-2 p-1 bg-light text-dark">
           <MyResponsiveLine data={weightchartData}/>
         </div>
-        <div className="container w-50 h-50 m-2 p-1 bg-light text-dark">
+        <h4>BMI Observations</h4>
+        <div className="container w-100 h-100 m-2 p-1 bg-light text-dark">
           <MyResponsiveLine data={bmichartData}/>
         </div>
     </div>
+    </div>
+    
    </>
     );
 };
