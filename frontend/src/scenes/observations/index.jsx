@@ -6,18 +6,32 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import MyResponsiveLine from "../../components/line";
 import { useState, useEffect } from "react";
   
 function createData(number, item, qty, price) {
  return { number, item, qty, price};
 }
   
-
+function formatChartData(val,obj) {
+  let ans={}
+  ans["id"]=val;
+  ans["color"]= "hsl(39, 70%, 50%)";
+  ans["data"]=[]
+  for (const [key, value] of Object.entries(obj)) {
+    ans["data"].push({
+      "x": key,
+      "y": value
+    })
+  }
+  return ans;
+}
 
 
 const Observations = ({patientData}) => {
   
   const [rows,setRows] = useState([])
+  const [chartData,setChartData] = useState([])
 
   useEffect(() => {
       const fillRows = ()=>{
@@ -29,9 +43,35 @@ const Observations = ({patientData}) => {
         }
       }
       setRows([]);
-      fillRows()
+      fillRows();
+
   }, [patientData])
-  
+
+  useEffect(() => {
+    const fillChart = ()=>{
+      var obj = {};
+      let data = patientData.observations;
+      for(let i=0;i<data.length;i++){
+        if(data[i]){
+          if(obj[data[i].description]){
+            obj[data[i].description][data[i].date]=data[i].value;
+          }
+          else{
+            obj[data[i].description]={};
+            obj[data[i].description][data[i].date]=data[i].value;
+          }
+        }
+      }
+      let dbp = formatChartData("Diastolic Blood Pressure",obj["Diastolic Blood Pressure"]);
+      console.log(dbp);
+      setChartData(chartData=>[...chartData,dbp])
+      console.log(chartData);
+    }
+    setChartData([]);
+    fillChart();
+
+}, [patientData])
+
   
 
   return (
@@ -62,6 +102,9 @@ const Observations = ({patientData}) => {
         </TableBody>
       </Table>
     </TableContainer>
+    </div>
+    <div className="container w-50 p-1">
+      <MyResponsiveLine data={chartData}/>
     </div>
    </>
     );
