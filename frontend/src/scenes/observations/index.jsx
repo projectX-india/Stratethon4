@@ -98,7 +98,7 @@ const Observations = ({patientData}) => {
 // console.log(rows);
   return (
     <>
-      <h3 className="p-3">Observations</h3>
+      <h3 className="m-4">Observations</h3>
       {/* <div className="container p-4" style={{
         overflow:"scroll",
         maxHeight:"80%"

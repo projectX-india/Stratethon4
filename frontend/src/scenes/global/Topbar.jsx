@@ -12,11 +12,11 @@ const Topbar = ({patientId,setpatientId,handleClick}) => {
     const colorMode = useContext(ColorModeContext);
 
     return (
-        <Box display="flex" justifyContent="space-between" p={2}>
+        <Box display="flex" justifyContent="space-between" p={3}>
       <Box
         display="flex"
         backgroundColor={colors.primary[400]}
-        borderRadius="3px"
+        borderRadius="4px"
       >
         <InputBase sx={{ ml: 2, flex: 1 }} onChange={(e)=>{setpatientId(e.target.value)}} placeholder="Enter Patient Id" />
         <IconButton type="button" sx={{ p: 1 }}>
