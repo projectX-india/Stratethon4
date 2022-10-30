@@ -9,6 +9,7 @@ import Immunisations from "./scenes/immunisations";
 import Medications from "./scenes/medications";
 import Observations from "./scenes/observations";
 import Allergies from "./scenes/allergies";
+import SelfAssesments from "./scenes/SelfAssesments";
 import axios from "./axios.js"
 import { sampleData } from "./data/sampleData";
 import { useState } from "react";
@@ -43,6 +44,7 @@ function App() {
                 <Route path="/conditions"  element={<Conditions  patientData={patientData} />} />
                 <Route path="/medications" element={<Medications patientData={patientData} />} />
                 <Route path="/allergies" element={<Allergies patientData={patientData} />} />
+                <Route path="/selfassesments" element={<SelfAssesments patientData={patientData} />} />
             </Routes>
           </main>
         </div>

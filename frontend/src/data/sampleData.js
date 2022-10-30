@@ -1811,6 +1811,432 @@ export const sampleData = {
            }
         ],
         "supplies": [],
-        "medications": [],
+        "medications": [
+         {
+            "_id": "635e5fb061cfe8c37d12255d",
+            "start": "2000-05-07T14:30:28.000Z",
+            "stop": null,
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "42c4fca7-f8a9-3cd1-982a-dd9751bf3e2a",
+            "encounterid": "036e3336-9bc1-ae5b-9c9e-dab11c84e5c1",
+            "code": 997488,
+            "description": "Fexofenadine hydrochloride 30 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "275.64"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "273"
+            },
+            "totalcost": {
+                "$numberDecimal": "75249.72"
+            },
+            "reasoncode": null,
+            "reasondescription": "",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb061cfe8c37d122561",
+            "start": "2000-05-14T07:09:55.000Z",
+            "stop": null,
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "42c4fca7-f8a9-3cd1-982a-dd9751bf3e2a",
+            "encounterid": "ad33c19f-4cea-846d-d1d7-ebb55ed2357d",
+            "code": 1870230,
+            "description": "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+            "basecost": {
+                "$numberDecimal": "6499.65"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "273"
+            },
+            "totalcost": {
+                "$numberDecimal": "1774404.45"
+            },
+            "reasoncode": null,
+            "reasondescription": "",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb161cfe8c37d122565",
+            "start": "2006-12-07T21:30:28.000Z",
+            "stop": null,
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "5059a55e-5d6e-34d1-b6cb-d83d16e57bcf",
+            "encounterid": "d730ac18-f736-2787-d7d4-4b061f6507f7",
+            "code": 1649987,
+            "description": "doxycycline hyclate 100 MG",
+            "basecost": {
+                "$numberDecimal": "129.94"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "193"
+            },
+            "totalcost": {
+                "$numberDecimal": "25078.42"
+            },
+            "reasoncode": 444814009,
+            "reasondescription": "Viral sinusitis (disorder)",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb161cfe8c37d122569",
+            "start": "2014-12-14T14:30:28.000Z",
+            "stop": "2015-12-09T14:30:28.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "5059a55e-5d6e-34d1-b6cb-d83d16e57bcf",
+            "encounterid": "df8c232b-b04e-b176-2a88-7e7b3ae871b6",
+            "code": 748962,
+            "description": "Camila 28 Day Pack",
+            "basecost": {
+                "$numberDecimal": "356.37"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "12"
+            },
+            "totalcost": {
+                "$numberDecimal": "4276.44"
+            },
+            "reasoncode": null,
+            "reasondescription": "",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb161cfe8c37d12256d",
+            "start": "2015-12-09T14:30:28.000Z",
+            "stop": "2016-12-03T14:30:28.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "4d71f845-a6a9-3c39-b242-14d25ef86a8d",
+            "encounterid": "a0600f99-e0fb-ad38-d143-50c72515663d",
+            "code": 751905,
+            "description": "Trinessa 28 Day Pack",
+            "basecost": {
+                "$numberDecimal": "363.84"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "12"
+            },
+            "totalcost": {
+                "$numberDecimal": "4366.08"
+            },
+            "reasoncode": null,
+            "reasondescription": "",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb161cfe8c37d122571",
+            "start": "2017-11-28T14:30:28.000Z",
+            "stop": "2018-11-23T14:44:02.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "6e2f1a2d-27bd-3701-8d08-dae202c58632",
+            "encounterid": "15e0813a-2cb1-c51b-4377-ac4df1152795",
+            "code": 1000126,
+            "description": "1 ML medroxyPROGESTERone acetate 150 MG/ML Injection",
+            "basecost": {
+                "$numberDecimal": "118.52"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "12"
+            },
+            "totalcost": {
+                "$numberDecimal": "1422.24"
+            },
+            "reasoncode": null,
+            "reasondescription": "",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb161cfe8c37d122575",
+            "start": "2018-03-21T14:30:28.000Z",
+            "stop": "2019-03-27T14:30:28.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "6e2f1a2d-27bd-3701-8d08-dae202c58632",
+            "encounterid": "56a90e58-0f3b-cbef-2476-85fa9243c432",
+            "code": 308136,
+            "description": "amLODIPine 2.5 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "1.1"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "4"
+            },
+            "totalcost": {
+                "$numberDecimal": "4.4"
+            },
+            "reasoncode": 59621000,
+            "reasondescription": "Hypertension",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb161cfe8c37d122579",
+            "start": "2018-04-20T14:30:28.000Z",
+            "stop": "2019-03-27T14:30:28.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "6e2f1a2d-27bd-3701-8d08-dae202c58632",
+            "encounterid": "d004957d-cadb-9d3e-ba84-2ddf59db1174",
+            "code": 314076,
+            "description": "lisinopril 10 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "0.91"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "3"
+            },
+            "totalcost": {
+                "$numberDecimal": "2.73"
+            },
+            "reasoncode": 59621000,
+            "reasondescription": "Hypertension",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb161cfe8c37d12257d",
+            "start": "2019-03-27T14:30:28.000Z",
+            "stop": "2020-04-01T14:30:28.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "4d71f845-a6a9-3c39-b242-14d25ef86a8d",
+            "encounterid": "bc40e26b-af30-d3a8-70e6-8144f92f8509",
+            "code": 314076,
+            "description": "lisinopril 10 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "0.91"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "4"
+            },
+            "totalcost": {
+                "$numberDecimal": "3.64"
+            },
+            "reasoncode": 59621000,
+            "reasondescription": "Hypertension",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb161cfe8c37d122581",
+            "start": "2019-03-27T14:30:28.000Z",
+            "stop": "2020-04-01T14:30:28.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "4d71f845-a6a9-3c39-b242-14d25ef86a8d",
+            "encounterid": "bc40e26b-af30-d3a8-70e6-8144f92f8509",
+            "code": 308136,
+            "description": "amLODIPine 2.5 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "1.18"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "4"
+            },
+            "totalcost": {
+                "$numberDecimal": "4.72"
+            },
+            "reasoncode": 59621000,
+            "reasondescription": "Hypertension",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb161cfe8c37d122585",
+            "start": "2019-11-18T14:44:02.000Z",
+            "stop": "2020-11-12T14:44:02.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "b1c428d6-4f07-31e0-90f0-68ffa6ff8c76",
+            "encounterid": "66295845-e0ee-4bbf-f231-da9b3a4ebdea",
+            "code": 1534809,
+            "description": "168 HR Ethinyl Estradiol 0.00146 MG/HR / norelgestromin 0.00625 MG/HR Transdermal System",
+            "basecost": {
+                "$numberDecimal": "636.12"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "12"
+            },
+            "totalcost": {
+                "$numberDecimal": "7633.44"
+            },
+            "reasoncode": null,
+            "reasondescription": "",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb261cfe8c37d122589",
+            "start": "2020-04-01T14:30:28.000Z",
+            "stop": "2021-04-07T14:30:28.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "b1c428d6-4f07-31e0-90f0-68ffa6ff8c76",
+            "encounterid": "81209d95-6de4-218f-555e-4e2a4185f048",
+            "code": 314076,
+            "description": "lisinopril 10 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "0.91"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "4"
+            },
+            "totalcost": {
+                "$numberDecimal": "3.64"
+            },
+            "reasoncode": 59621000,
+            "reasondescription": "Hypertension",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb261cfe8c37d12258d",
+            "start": "2020-04-01T14:30:28.000Z",
+            "stop": "2021-04-07T14:30:28.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "b1c428d6-4f07-31e0-90f0-68ffa6ff8c76",
+            "encounterid": "81209d95-6de4-218f-555e-4e2a4185f048",
+            "code": 308136,
+            "description": "amLODIPine 2.5 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "1.11"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "4"
+            },
+            "totalcost": {
+                "$numberDecimal": "4.44"
+            },
+            "reasoncode": 59621000,
+            "reasondescription": "Hypertension",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb261cfe8c37d122591",
+            "start": "2021-04-07T14:30:28.000Z",
+            "stop": "2022-04-13T14:30:28.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "047f6ec3-6215-35eb-9608-f9dda363a44c",
+            "encounterid": "a249d9cb-591a-70c1-1966-a75af71f40a1",
+            "code": 314076,
+            "description": "lisinopril 10 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "0.91"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "4"
+            },
+            "totalcost": {
+                "$numberDecimal": "3.64"
+            },
+            "reasoncode": 59621000,
+            "reasondescription": "Hypertension",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb261cfe8c37d122595",
+            "start": "2021-04-07T14:30:28.000Z",
+            "stop": "2022-04-13T14:30:28.000Z",
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "047f6ec3-6215-35eb-9608-f9dda363a44c",
+            "encounterid": "a249d9cb-591a-70c1-1966-a75af71f40a1",
+            "code": 308136,
+            "description": "amLODIPine 2.5 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "1.14"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "4"
+            },
+            "totalcost": {
+                "$numberDecimal": "4.56"
+            },
+            "reasoncode": 59621000,
+            "reasondescription": "Hypertension",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb261cfe8c37d122599",
+            "start": "2022-04-13T14:30:28.000Z",
+            "stop": null,
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "6e2f1a2d-27bd-3701-8d08-dae202c58632",
+            "encounterid": "c7b6413e-a7e7-0d30-818d-db420cd0d9aa",
+            "code": 314076,
+            "description": "lisinopril 10 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "0.91"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "2"
+            },
+            "totalcost": {
+                "$numberDecimal": "1.82"
+            },
+            "reasoncode": 59621000,
+            "reasondescription": "Hypertension",
+            "__v": 0
+        },
+        {
+            "_id": "635e5fb261cfe8c37d12259d",
+            "start": "2022-04-13T14:30:28.000Z",
+            "stop": null,
+            "patientid": "a2e5dc25-d94f-bbbc-6836-d4498fe8f5e3",
+            "payerid": "6e2f1a2d-27bd-3701-8d08-dae202c58632",
+            "encounterid": "c7b6413e-a7e7-0d30-818d-db420cd0d9aa",
+            "code": 308136,
+            "description": "amLODIPine 2.5 MG Oral Tablet",
+            "basecost": {
+                "$numberDecimal": "1.31"
+            },
+            "payercoverage": {
+                "$numberDecimal": "0"
+            },
+            "dispenses": {
+                "$numberDecimal": "2"
+            },
+            "totalcost": {
+                "$numberDecimal": "2.62"
+            },
+            "reasoncode": 59621000,
+            "reasondescription": "Hypertension",
+            "__v": 0
+        }
+        ],
         "__v": 0
      }

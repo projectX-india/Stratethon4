@@ -6,11 +6,15 @@ import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
+import VaccinesIcon from '@mui/icons-material/Vaccines';
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import CoronavirusIcon from '@mui/icons-material/Coronavirus';
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
+import MedicationIcon from '@mui/icons-material/Medication';
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
+import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -38,6 +42,10 @@ const Sidebar = ({patientData}) => {
 
   return (
     <Box
+      style={{
+        position:'sticky',
+        position:'-webkit-sticky;'
+      }}
       sx={{
         "& .pro-sidebar-inner": {
           background: `${colors.primary[400]} !important`,
@@ -54,6 +62,8 @@ const Sidebar = ({patientData}) => {
         "& .pro-menu-item.active": {
           color: "#6870fa !important",
         },
+        position:'sticky',
+        position:'-webkit-sticky;'
       }}
     >
       <ProSidebar collapsed={isCollapsed}>
@@ -119,7 +129,7 @@ const Sidebar = ({patientData}) => {
             <Item
               title="Conditions"
               to="/conditions"
-              icon={<PeopleOutlinedIcon />}
+              icon={<ContentPasteIcon />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -131,16 +141,16 @@ const Sidebar = ({patientData}) => {
               setSelected={setSelected}
             />
             <Item
-              title="Immunisations"
+              title="Vaccines"
               to="/immunisations"
-              icon={<ReceiptOutlinedIcon />}
+              icon={<VaccinesIcon/>}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Medications"
               to="/medications"
-              icon={<ReceiptOutlinedIcon />}
+              icon={<MedicationIcon />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -161,16 +171,9 @@ const Sidebar = ({patientData}) => {
               setSelected={setSelected}
             />
             <Item
-              title="Location Based"
-              to="/bar"
-              icon={<BarChartOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Clustering Based"
-              to="/bar"
-              icon={<BarChartOutlinedIcon />}
+              title="Self Assesments"
+              to="/selfassesments"
+              icon={<SelfImprovementIcon/>}
               selected={selected}
               setSelected={setSelected}
             />

@@ -20,7 +20,7 @@ const Allergies = ({patientData}) => {
         {
             'answer':false,
             'description':'mold',
-            'reactionQuestion':'Do think you have running nose?'
+            'reactionQuestion':'Do you think you have running nose?'
         },
         {
             'answer':false,
@@ -81,9 +81,7 @@ const Allergies = ({patientData}) => {
                                                 <ListItemText primary={`${object.description} (${object.category})`} />
                                             </ListItemButton>
                                         </ListItem>
-                                    )
-                                        
-                                        
+                                    )  
                                 })
                             }
                         </List>
@@ -111,8 +109,6 @@ const Allergies = ({patientData}) => {
                                             </ListItemButton>
                                         </ListItem>
                                     )
-                                        
-                                        
                                 })
                             }
                         </List>
@@ -123,8 +119,8 @@ const Allergies = ({patientData}) => {
         </div>
         <div style={{'width':'90%','display':'flex','flexDirection':'row'}}>
             <div className="container w-100 h-50  m-4">
-            <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-                <h3 className="p-3">self assessment</h3>
+            <Box sx={{ width: '100%', bgcolor: 'background.paper',padding:'1em' }}>
+                <h3 className="p-3">Self Assessment</h3>
                 {
                     allergySurveyQuestions.map((object,i) => {
                         return (
