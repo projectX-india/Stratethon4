@@ -405,8 +405,6 @@ useEffect(() => {
                                         Your vital seems right! keep it up
                                     </Alert>
                                 ):''
-                            
-                            
                         )
                     }
                 </Box>

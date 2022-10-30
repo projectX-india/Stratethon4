@@ -37,7 +37,7 @@ const Allergies = ({patientData}) => {
         {
             'answer':false,
             'description':'Fish',
-            'reactionQuestion':'Do think you have Diarhea?'
+            'reactionQuestion':'Do think you have Diarrhea?'
         }
     ]);
 
