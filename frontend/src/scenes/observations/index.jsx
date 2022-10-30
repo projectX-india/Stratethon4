@@ -7,16 +7,16 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { useState, useEffect } from "react";
-  
+
 function createData(number, item, qty, price) {
  return { number, item, qty, price};
 }
-  
+
 
 
 
 const Observations = ({patientData}) => {
-  
+
   const [rows,setRows] = useState([])
 
   useEffect(() => {
@@ -31,13 +31,16 @@ const Observations = ({patientData}) => {
       setRows([]);
       fillRows()
   }, [patientData])
-  
-  
+
+
 
   return (
     <>
       <h3 className="p-3">Observations</h3>
-      <div className="container p-4">
+      <div className="container p-4" style={{
+        overflow:"scroll",
+        maxHeight:"80%"
+      }}>
       <TableContainer component={Paper}>
       <Table aria-label="simple table">
         <TableHead>
