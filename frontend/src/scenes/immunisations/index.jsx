@@ -39,7 +39,7 @@ const Immunisations = ({patientData}) => {
 
   return (
     <>
-      <h3 className="p-3">Immunizations</h3>
+      <h3 className="m-4">Immunizations</h3>
       <div className="container p-4">
         <TableContainer component={Paper}>
         <Table aria-label="simple table">

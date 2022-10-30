@@ -68,6 +68,7 @@ const Allergies = ({patientData}) => {
 
     return (
     <>
+        <h3 className="m-4">Allergies</h3>
         <div style={{'width':'90%','display':'flex','flexDirection':'row'}}>
             <div className="container w-50 h-50  m-4">
                 <Box sx={{ width: '100%'}}>

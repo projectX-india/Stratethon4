@@ -12,9 +12,6 @@ function createData(number, item, qty, price,desc) {
  return { number, item, qty, price,desc };
 }
   
-
-
-
 const Conditions = ({patientData}) => {
 
  
@@ -39,7 +36,7 @@ const Conditions = ({patientData}) => {
 
   return (
     <>
-      <h3 className="p-3">Conditions</h3>
+      <h3 className="m-4">Conditions</h3>
       <div className="container p-4">
         <TableContainer component={Paper}>
         <Table aria-label="simple table">
