@@ -40,9 +40,9 @@ app.use('/procedure',proceduresData);
 app.use('/supply',suppliesData);
 app.use('/medication',medicatonsData);
 
-// const connection_url = `mongodb+srv://${DBusername}:${DBpassword}@${DBname}.${DBcluster}.mongodb.net/?retryWrites=true&w=majority`;
+const connection_url = `mongodb+srv://${DBusername}:${DBpassword}@${DBname}.${DBcluster}.mongodb.net/?retryWrites=true&w=majority`;
 
-const connection_url = "mongodb://127.0.0.1:27017/stratethon4";
+// const connection_url = "mongodb://127.0.0.1:27017/stratethon4";
 
 mongoose
     .connect(connection_url)
