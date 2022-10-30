@@ -13,11 +13,11 @@ const Dashboard = ({patientData}) => {
       <Box display="flex" flexDirection="row">
       <Box display="flex" width="30%" flexDirection="column">
         <BasicCard title="Id"  desc={patientData.id}/>
-        <BasicCard title="BirthDate"  desc={birthDate.toDateString()}/>
+        <BasicCard title="Income"  desc={patientData.income}/>
         <BasicCard title="Birth Place"  desc={patientData.birthplace}/>
       </Box>
       <Box display="flex" width="30%" flexDirection="column">
-        <BasicCard title="DeathDate"  desc={deathDate.toDateString()}/>
+        <BasicCard title="BirthDate"  desc={birthDate.toDateString()}/>
         <BasicCard title="Driving Licence"  desc={patientData.driversLicence}/>
         <BasicCard title="Address"  desc={patientData.address}/>
       </Box>
