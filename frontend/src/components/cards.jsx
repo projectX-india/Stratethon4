@@ -11,13 +11,12 @@ import {tokens} from "../theme"
 export default function BasicCard({title,desc}) {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    
 
   return (
     <div className='container m-2 p-2'>
-        <Card sx={{ minWidth: 275 }}>
+        <Card sx={{ minWidth: 275  } } style={{backgroundColor: colors.primary[400]}}>
         <CardContent>
-            <Typography sx={{ fontSize: 14 }} color={colors.grey[100]} gutterBottom>
+            <Typography sx={{ fontSize: 14 }} color={colors.grey[200]} gutterBottom>
             {title}
             </Typography>
             <Typography variant="h5" component="div">
