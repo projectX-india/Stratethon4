@@ -12,7 +12,6 @@ import { useState, useEffect } from "react";
 function createData(number, item, qty, price) {
  return { number, item, qty, price};
 }
-<<<<<<< HEAD
   
 function formatChartData(val,obj) {
   let ans={}
@@ -27,10 +26,6 @@ function formatChartData(val,obj) {
   }
   return ans;
 }
-=======
-
-
->>>>>>> 1b2dd350c7ac2436ee130e383970ed3f2727453b
 
 
 const Observations = ({patientData}) => {
@@ -52,7 +47,6 @@ const Observations = ({patientData}) => {
 
   }, [patientData])
 
-<<<<<<< HEAD
   useEffect(() => {
     const fillChart = ()=>{
       var obj = {};
@@ -79,9 +73,6 @@ const Observations = ({patientData}) => {
 }, [patientData])
 
   
-=======
-
->>>>>>> 1b2dd350c7ac2436ee130e383970ed3f2727453b
 
   return (
     <>
