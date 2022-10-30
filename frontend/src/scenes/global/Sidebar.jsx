@@ -84,8 +84,8 @@ const Sidebar = ({patientData}) => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h3" color={colors.grey[100]}>
-                  WeCare
+                <Typography variant="h1" color={colors.grey[100]} fontWeight="bold">
+                  UPCARE
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -93,15 +93,15 @@ const Sidebar = ({patientData}) => {
               </Box>
             )}
           </MenuItem>
+          <br/>
 
           {!isCollapsed && (
             <Box mb="25px">
               
               <Box textAlign="center">
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   color={colors.grey[100]}
-                  fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
                  {patientData.first} {patientData.last}

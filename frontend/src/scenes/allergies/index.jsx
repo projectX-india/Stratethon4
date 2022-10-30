@@ -14,7 +14,14 @@ import Alert from '@mui/material/Alert';
 import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
 
+import {  useTheme } from "@mui/material";
+import {tokens} from "../../theme"
+
 const Allergies = ({patientData}) => {
+
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
+
     const [existingAllergies, setexistingAllergies] = useState([]);
     const [allergySurveyQuestions, setallergySyrveyQuestions] = useState([
         {
@@ -63,10 +70,10 @@ const Allergies = ({patientData}) => {
     <>
         <div style={{'width':'90%','display':'flex','flexDirection':'row'}}>
             <div className="container w-50 h-50  m-4">
-                <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-                    <nav aria-label="main mailbox folders">
+                <Box sx={{ width: '100%'}}>
+                    <nav aria-label="main mailbox folders" style={{backgroundColor: colors.primary[400]}}>
                         <List subheader={
-                            <ListSubheader component="div" id="nested-list-subheader">
+                            <ListSubheader component="div" id="nested-list-subheader" style={{backgroundColor: colors.primary[400]}}>
                                 Allergic to
                             </ListSubheader>
                         }>
@@ -91,9 +98,9 @@ const Allergies = ({patientData}) => {
             </div>
             <div className="container w-50 h-50  m-4">
                 <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-                    <nav aria-label="main mailbox folders">
+                    <nav aria-label="main mailbox folders"  style={{backgroundColor: colors.primary[400]}}>
                         <List subheader={
-                            <ListSubheader component="div" id="nested-list-subheader">
+                            <ListSubheader component="div" id="nested-list-subheader"  style={{backgroundColor: colors.primary[400]}}>
                                 You might be at risk of following allergies:
                             </ListSubheader>
                         }>
@@ -119,7 +126,7 @@ const Allergies = ({patientData}) => {
         </div>
         <div style={{'width':'90%','display':'flex','flexDirection':'row'}}>
             <div className="container w-100 h-50  m-4">
-            <Box sx={{ width: '100%', bgcolor: 'background.paper',padding:'1em' }}>
+            <Box sx={{ width: '100%', bgcolor: 'background.paper',padding:'1em' }}  style={{backgroundColor: colors.primary[400]}}>
                 <h3 className="p-3">Self Assessment</h3>
                 {
                     allergySurveyQuestions.map((object,i) => {
@@ -140,7 +147,7 @@ const Allergies = ({patientData}) => {
                                 {
                                     (object.answer)?
                                         (<Alert 
-                                            sx={{ width: '70%', bgcolor: 'background.paper' }}
+                                            sx={{ width: '70%', bgcolor: 'background.paper' ,}}
                                             severity="warning">
                                             You might be at risk of {`${object.description}`} Allergy!
                                         </Alert>):''
